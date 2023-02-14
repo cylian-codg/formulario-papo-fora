@@ -1,0 +1,95 @@
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conversa fiada</title>
+    <link rel="stylesheet" href="estilo.css" type="text/css">
+</head>
+<body id="corpo">
+    <div id="ola">
+        <fieldset>
+            <legend>Formulário Papo Fora</legend>
+            <form action="assuntos.html" method="POST" onsubmit="validar()" >
+                <table >
+                    <tr>
+                        <th><b>Oi, Qual seu nome?</b></th>
+                        <td><input type="text" size="50" id="nom" required/></td>
+                    </tr>
+                    <tr>
+                        <th><b>Você é:</b></th>
+                        <td><input type="radio" name="opsexo" value="M"/>Berino
+                        <input type="radio" name="opsexo" value="F"/>Berina</td></tr>
+                    </tr><tr><th><b>Como anda a Familia?</b></th>
+                        <td><textarea name="txtarea" rows="4" cols="30"></textarea></td>
+                    </tr><tr><th><b>Como tá o clima ai?</b></th>
+                        <td><select name = "clima">
+                                <option value="sol">Vou ali fritar um ovo na calçada.</option>
+                                <option value="chuva">Um toró.</option>
+                                <option value="casamentu">Indeciso tipo eu.</option>
+                                <option value="sla">Tem céu aqui?</option>
+                            </select></td>
+                    </tr><tr><th><b>Vamos conversar sobre o quê?</b></th>
+                        <td><input type="checkbox" name="Musica" value="music">Música
+                        <input type="checkbox" name="Comida" value="food">Comida
+                        <input type="checkbox" name="Religião" value="blibia">Jesus</td>
+                        </tr>
+                        <tr>
+                        <th><input class="but" type="submit" value="Continuar conversa" onclick="validar()"/></th>
+                        <th><input class="but" type="button" value="xau" onclick="conf()"/> </th>
+                        <th><input class="but" type="reset" value="Suba e desça e de mim esqueça"/></th> 
+                        </tr>
+                </table>
+            </form>
+         </fieldset> 
+         <th> 
+    </div>
+<script>
+    var alertum = confirm("Oi, você deseja conversar um pouco?");//caixa de texto que pergunta se quer conversar
+
+    if(alertum == false ){//se o usuario clicou em cancelar exibir pagina 'fim de papo'
+        conf();
+    }
+    function conf(){
+        window.location.href = "confirmação.html";//exibir pagina 'fim de papo'
+    }
+    function ass(){
+        window.location.href = "assuntos.html";//exibir pagina 'assuntos'
+    }
+    var passaValor= function(valor)//passar uma varriavel por meio do url
+{
+    window.location = "assuntos.html?minhaVariavel="+valor;
+}
+var op = new array()
+if(window.getElementsByName("Musica").Value == ""){
+ op[0] = 0;
+}else{
+     op[0] = 1;
+ }
+ if(window.getElementsByName("Comida").Value == ""){
+ op[1] = 0;
+}else{
+     op[1] = 1;
+ }
+ if(window.getElementsByName("Religião").Value == ""){
+ op[2] = 0;
+}else{
+     op[2] = 1;
+ }
+ passaValor(op()); //uma string que fala se o assunto esta ou não marcado
+
+    function validar(){//uma função pra ver se o usuario digitou ao menos o nome
+        if(document.getElementById("nom").Value === "") {
+            alert("Por favor, me diga seu nome");
+            document.getElementById("nome").focus();//se não digitou o nome o cursor vai pra o campo de texto dele
+            return true;
+        }
+        else{
+            return false;
+        }
+
+    }
+</script>
+    
+</body>
+</html>

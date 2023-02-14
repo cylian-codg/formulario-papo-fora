@@ -1,0 +1,173 @@
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assuntos diversos</title>
+    <link rel="stylesheet" href="estilo.css" type="text/css">
+    <script>
+        var variavel = queryString("minhaVariavel");
+        if (variavel == "001"){
+            document.getElementById('musc').style.display = 'none';
+            document.getElementById('food').style.display = 'none';
+        }if (variavel == "011"){
+            document.getElementById('musc').style.display = 'none';
+        }if (variavel == "101"){
+            document.getElementById('food').style.display = 'none';
+        }if (variavel == "100"){
+            document.getElementById('food').style.display = 'none';
+            document.getElementById('relig').style.display = 'none'
+        }if (variavel == "110"){
+            document.getElementById('relig').style.display = 'none'
+        }if (variavel == "010"){
+            document.getElementById('musc').style.display = 'none';
+            document.getElementById('relig').style.display = 'none'
+        }else{
+            conf();
+        }
+
+    </script>
+    
+</head>
+<body id="corpo">
+    <div id="musc">
+        <fieldset>
+            <legend>Sobre musica</legend>
+        
+        <form action="confirmação.html" method="POST" enctype="multipart/form-data">
+            <table >
+                <tr>
+                    <h3>Qual dos dois você acha mais importante?</h3>
+                
+                        <td><input type="radio" name="opmule" value="le"/> Letra</td>
+                        <td><input type="radio" name="opule" value="mu"/> Ritmo</td>
+                    </tr>
+                <tr>
+                    <th>Qual seu gênero favorito?</th>
+                    <td><input type="radio" name="gener" value="Axé"/>Axé </td>               
+                    <td><input type="radio" name="gener" value="Blues"/>Blues </td>
+                    <td><input type="radio" name="gener" value="Country"/>Country </td>
+                    <td><input type="radio" name="gener" value="Eletrônica"/>Eletrônica </td>
+                    <td><input type="radio" name="gener" value="forro"/>Forró </td>
+                    <td><input type="radio" name="gener" value="funk"/>Funk </td>
+                    <td><input type="radio" name="gener" value="gospel"/>Gospel </td>
+                    <td><input type="radio" name="gener" value="Hip Hop"/>Hip Hop </td>
+                    <td><input type="radio" name="gener" value="Jazz"/>Jazz </td>
+                    <td><input type="radio" name="gener" value="MPB"/>MPB </td>
+                    <td><input type="radio" name="gener" value="Música clássica"/>Música clássica </td>
+                    <td><input type="radio" name="gener" value="Pagode"/>Pagode </td>
+                    <td><input type="radio" name="gener" value="Pop"/>Pop </td>
+                    <td><input type="radio" name="gener" value="Rap"/>Rap </td>
+                    <td><input type="radio" name="gener" value="Reggae"/>Reggae </td>
+                    <td><input type="radio" name="gener" value="Rock"/>Rock </td>
+                    <td><input type="radio" name="gener" value="Samba"/>Samba </td>
+                    <td><input type="radio" name="gener" value="Sertanejo"/>Sertanejo </td>
+                </tr>
+                <tr>
+                    <th>Me indique uma musica:</th>
+                    <td><input type="text" name="MusicaIndicada" /></td>
+                </tr>
+                <tr>
+                    <th><input type="button" name="fechoum" value="Fim de assunto" onclick="fecho()"  class="but"/></th>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+
+    </div>
+    <div id="relig">
+        <fieldset>
+            <legend>Sobre Religião</legend>
+        
+        <form action="confirmação.html" method="POST" enctype="multipart/form-data">
+            <table">
+                <tr>
+                    <th><h3>Qual sua religião:</h3></th>
+                    <td><input type="radio" name="reli" value="Cristianismo"/>Cristianismo</td>            
+                    <td><input type="radio" name="reli" value="Islamismo"/>Islamismo</td>
+                    <td><input type="radio" name="reli" value="Hinduísmo"/>Hinduísmo</td>
+                    <td><input type="radio" name="reli" value="rtc"/>Religião tradicional chinesa</td>
+                    <td><input type="radio" name="reli" value="Sikhismo "/>Sikhismo</td>
+                    <td><input type="radio" name="reli" value="Budismo"/>Budismo</td>
+                    <td><input type="radio" name="reli" value="Judaísmo"/>Judaísmo</td>
+                    <td><input type="radio" name="reli" value="Espiritismo"/>Espiritismo</td>
+                </tr>
+                <tr>
+                    <th>
+                        <h3>Bem... Eu sou cristã, acreditamos na biblia. Para saber mais sobre click no link:</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://biblia.com.br/curso/"> Aprenda sobre a biblia</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <input type="button" onclick="fecho()" value="Fim de assunto"  class="but"/>
+                    </th>
+                </tr>
+            </table>
+        </form>
+        </fieldset>
+    </div>
+    <div id="food">
+        <fieldset>
+            <legend>Sobre comida</legend>
+        
+        <form action="confirmação.html" method="POST" enctype="multipart/form-data">
+            <table >
+                <tr>
+                    <th><h3>qual seu estilo de alimentação? </h3></th>
+                    <td><select name = "ali">
+                        <option value="olvgt">eu não como carne mas como ovo e leite e seus derivados</option>
+                        <option value="vgt">eu não como carne nem nada que venha dos animais</option>
+                        <option value="car">eu como tudo que me derem</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <th><h3>Qual sua comida favorita?</h3></th>
+                    <td><input type="text" name="cf"/></td>
+                </tr>
+                <tr>
+                    <th>
+                        <input type="button" name="fechou3" value="Fim de assunto" onclick="fecho()"  class="but"/>
+                    </th>
+                </tr>
+            </table>
+    </fieldset>
+    </div>
+    <input type="button" onclick="voltar()" value="voltar" class="but"/>
+
+
+    <script>
+        function voltar(){
+            window.location.href = "principal.html";
+        }
+        function fecho(){
+            window.location.href = "confirmação.html";
+            
+        }
+        function queryString(parameter) {  //resgatar a variavel que passei por url na oura pagina
+              var loc = location.search.substring(1, location.search.length);   
+              var param_value = false;   
+              var params = loc.split("&");   
+              for (i=0; i<params.length;i++) {   
+                  param_name = params[i].substring(0,params[i].indexOf('='));   
+                  if (param_name == parameter) {                                          
+                      param_value = params[i].substring(params[i].indexOf('=')+1)   
+                  }   
+              }   
+              if (param_value) {   
+               return param_value;
+              } else {   
+                  return undefined; 
+              }
+              
+        }
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+
+#corpo{
+    background-color: darkgray;
+    color: navy;
+    /*cor de fundo da pagina e de texto*/
+} .but{
+    background-color: rgb(77, 77, 121);
+    color: floralwhite;
+    border: black 10px;
+    align-items: center;
+    /* cor de fundo do botão de texto e ajuste da borda*/
+}select{
+    color: navy;
+    border: darkgray;
+    /*cor tambem para o botão de seleção*/ 
+  }form{
+      width: 1121px;
+      height: 324px;
+      align-items: center;
+      /*definindo medidas padrão para os formularios*/
+  }table{
+    width: 1110px;
+    height: 300px;
+    align-items: center;
+    /* deixando a tabela mais ajustada definindo sua largura e altura menor que a do formulario*/
+  } h1{
+      text-align: center;
+      /*alinhando textos das tags h1*/
+  }.hidden {
+    display:block;
+    /*display block para quando precisar ocultar algo*/
+}
